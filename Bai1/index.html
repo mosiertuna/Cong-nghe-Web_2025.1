@@ -8,78 +8,119 @@
 </head>
 
 <body>
-    <h1>Welcome to the Flower Shop</h1>
-    <p>Explore our beautiful collection of flowers.</p>
+    <header>
+        <!-- Tiêu đề trang -->
+        <h1>Flower Shop</h1>
+        <!-- Thanh điều hướng -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <h2>Featured Flowers</h2>
-        <article>
-            <h3>Roses</h3>
-            <p>Roses are a classic symbol of love and beauty. Available in various colors.</p>
-            <nav>
-                <ul>
-                    <li>Red Roses</li>
-                    <img src="Red Roses.jpg">
-                    <p>Price: $2.5</p>
-                    <li>White Roses</li>
-                    <img src="WhiteRoses.jpg">
-                    <p>Price: $2.1</p>
-                    <li>Yellow Roses</li>
-                    <img src="Yellow Roses.jpg">
-                    <p>Price: $2.7</p>
-                </ul>
-        </article>
-        <article>
-            <h3>Tulips</h3>
-            <p>Tulips are vibrant and cheerful flowers that bloom in spring.</p>
-            <nav>
-                <ul>
-                    <li>Red Tulips</li>
-                    <img src="Redtulip.jpg">
-                    <p>Price: $2.50</p>
-                    <li>Pink Tulips</li>
-                    <img src="Pink Tulips.jpg">
-                    <p>Price: $1.5</p>
-                    <li>Purple Tulips</li>
-                    <img src="Purple Tulips.jpg">
-                    <p>Price: $2</p>
-                </ul>
-            </nav>
-        </article>
-        <article>
-            <h3>Daisies</h3>
-            <p>Daisies represent innocence and purity, perfect for any occasion.</p>
-            <nav>
-                <ul>
-                    <li>White Daisies</li>
-                    <img src="White Daisies.jpg">
-                    <p>Price: $0.9</p>
-                    <li>Yellow Daisies</li>
-                    <img src="Yellow Daisies.jpg">
-                    <p>Price: $1.1</p>
-                    <li>Gerbera Daisies</li>
-                    <img src="Gerbera Daisies.jpg">
-                    <p>Price: $1.3</p>
-                </ul>
-        </article>
-        <form method="post" action="#" novalidate>
-            <div>
-                <label for="name">Tên</label><br>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Email</label><br>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="message">Nội dung</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div>
-                <button type="submit">Gửi</button>
-            </div>
-        </form>
+        <!-- Phần giới thiệu -->
+        <section>
+            <h2>Introduction</h2>
+            <p>Explore our beautiful collection of flowers.</p>
+        </section>
+        <!-- Danh sách sản phẩm -->
+        <section id="product-list">
+            <h2>Featured Flowers</h2>
+            <article class="product-item">
+                <h3>Roses</h3>
+                <p>Roses are a classic symbol of love and beauty. Available in various colors.</p>
+                <li class="product-item">
+                    <img src="/img/Red Roses.jpg" alt="Red Roses">
+                    <div class="product-info">
+                        <span class="product-name">Red Roses</span>
+                        <span class="price">$2.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/WhiteRoses.jpg" alt="White Roses">
+                    <div class="product-info">
+                        <span class="product-name">White Roses</span>
+                        <span class="price">$2.10</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Yellow Roses.jpg" alt="Yellow Roses">
+                    <div class="product-info">
+                        <span class="product-name">Yellow Roses</span>
+                        <span class="price">$2.70</span>
+                    </div>
+                </li>
+            </article>
+            <article class="product-item">
+                <h3>Tulips</h3>
+                <p>Tulips are vibrant and cheerful flowers that bloom in spring.</p>
+                <li class="product-item">
+                    <img src="/img/Redtulip.jpg" alt="Red Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Red Tulips</span>
+                        <span class="price">$2.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Pink Tulips.jpg" alt="Pink Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Pink Tulips</span>
+                        <span class="price">$1.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Purple Tulips.jpg" alt="Purple Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Purple Tulips</span>
+                        <span class="price">$2.00</span>
+                    </div>
+                </li>
+            </article>
+            <article class="product-item">
+                <h3>Daisies</h3>
+                <p>Daisies represent innocence and purity, perfect for any occasion.</p>
+                <li class="product-item">
+                    <img src="/img/White Daisies.jpg" alt="White Daisies">
+                    <div class="product-info">
+                        <span class="product-name">White Daisies</span>
+                        <span class="price">$0.90</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Yellow Daisies.jpg" alt="Yellow Daisies">
+                    <div class="product-info">
+                        <span class="product-name">Yellow Daisies</span>
+                        <span class="price">$1.10</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Gerbera Daisies.jpg" alt="Gerbera Daisies">
+                    <div class="product-info">
+                        <span class="product-name">Gerbera Daisies</span>
+                        <span class="price">$1.30</span>
+                    </div>
+                </li>
+            </article>
+        </section>
+        <!-- Form liên hệ -->
+        <section>
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
     <footer>
+        <!-- Thông tin bản quyền -->
         <p>&copy; 2025 Flower Shop.</p>
     </footer>
 </body>

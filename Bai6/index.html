@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Tiêu đề trang -->
+        <h1>Flower Shop</h1>
+        <!-- Thanh điều hướng -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#" id="cartBtn">Cart (<span id="cartCount">0</span>)</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Phần giới thiệu -->
+        <section>
+            <h2>Introduction</h2>
+            <p>Explore our beautiful collection of flowers.</p>
+        </section>
+        <!-- Danh sách sản phẩm với chức năng tìm kiếm và thêm sản phẩm -->
+        <section id="product-list">
+            <h2>Featured Flowers</h2>
+            <input type="text" id="searchInput" placeholder="Search flowers...">
+            <button id="searchBtn">Search</button>
+            <button id="addProductBtn">Add Flower</button>
+        </section>
+        <!-- Danh sách giỏ hàng -->
+        <section id="cart-section" class="hidden">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cartTotal">0.00</span></p>
+            <button id="clearCartBtn">Clear Cart</button>
+        </section>
+        <!-- Form thêm sản phẩm mới -->
+        <form id="addProductForm" class="hidden">
+            <h3>Add New Flower</h3>
+            <label for="newName">Flower Name:</label>
+            <input type="text" id="newName" required>
+            <label for="newPrice">Price:</label>
+            <input type="number" id="newPrice" required>
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc" rows="3"></textarea>
+            <button type="submit">Add</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+            <p id="errorMsg" style="color:red;"></p>
+        </form>
+        <!-- Form liên hệ -->
+        <section>
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <!-- Thông tin bản quyền -->
+        <p>&copy; 2025 Flower Shop.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

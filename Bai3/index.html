@@ -1,122 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flower Shop - Bai3</title>
+    <title>Flower Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
+        <!-- Tiêu đề trang -->
         <h1>Flower Shop</h1>
+        <!-- Thanh điều hướng -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <!-- Search + Add product controls -->
-        <div class="controls">
-            <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." />
-            <button id="searchBtn">Tìm</button>
-
-            <button id="addProductBtn" type="button">Thêm sản phẩm</button>
-        </div>
-
-        <!-- Thêm sản phẩm (ẩn mặc định) -->
+        <!-- Phần giới thiệu -->
+        <section>
+            <h2>Introduction</h2>
+            <p>Explore our beautiful collection of flowers.</p>
+        </section>
+        <!-- Danh sách sản phẩm với chức năng tìm kiếm và thêm sản phẩm -->
+        <section id="product-list">
+            <h2>Featured Flowers</h2>
+            <input type="text" id="searchInput" placeholder="Search flowers...">
+            <button id="searchBtn">Search</button>
+            <button id="addProductBtn">Add Flower</button>
+            <article class="product-item">
+                <h3>Roses</h3>
+                <p>Roses are a classic symbol of love and beauty. Available in various colors.</p>
+                <li class="product-item">
+                    <img src="/img/Red Roses.jpg" alt="Red Roses">
+                    <div class="product-info">
+                        <span class="product-name">Red Roses</span>
+                        <span class="price">$2.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/WhiteRoses.jpg" alt="White Roses">
+                    <div class="product-info">
+                        <span class="product-name">White Roses</span>
+                        <span class="price">$2.10</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Yellow Roses.jpg" alt="Yellow Roses">
+                    <div class="product-info">
+                        <span class="product-name">Yellow Roses</span>
+                        <span class="price">$2.70</span>
+                    </div>
+                </li>
+            </article>
+            <article class="product-item">
+                <h3>Tulips</h3>
+                <p>Tulips are vibrant and cheerful flowers that bloom in spring.</p>
+                <li class="product-item">
+                    <img src="/img/Redtulip.jpg" alt="Red Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Red Tulips</span>
+                        <span class="price">$2.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Pink Tulips.jpg" alt="Pink Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Pink Tulips</span>
+                        <span class="price">$1.50</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Purple Tulips.jpg" alt="Purple Tulips">
+                    <div class="product-info">
+                        <span class="product-name">Purple Tulips</span>
+                        <span class="price">$2.00</span>
+                    </div>
+                </li>
+            </article>
+            <article class="product-item">
+                <h3>Daisies</h3>
+                <p>Daisies represent innocence and purity, perfect for any occasion.</p>
+                <li class="product-item">
+                    <img src="/img/White Daisies.jpg" alt="White Daisies">
+                    <div class="product-info">
+                        <span class="product-name">White Daisies</span>
+                        <span class="price">$0.90</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Yellow Daisies.jpg" alt="Yellow Daisies">
+                    <div class="product-info">
+                        <span class="product-name">Yellow Daisies</span>
+                        <span class="price">$1.10</span>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="/img/Gerbera Daisies.jpg" alt="Gerbera Daisies">
+                    <div class="product-info">
+                        <span class="product-name">Gerbera Daisies</span>
+                        <span class="price">$1.30</span>
+                    </div>
+                </li>
+            </article>
+        </section>
+        <!-- Form thêm sản phẩm mới -->
         <form id="addProductForm" class="hidden">
-            <h3>Thêm sản phẩm mới</h3>
-            <div>
-                <label for="productName">Tên sản phẩm</label>
-                <input type="text" id="productName" name="productName" required>
-            </div>
-            <div>
-                <label for="productPrice">Giá (ví dụ 2.50)</label>
-                <input type="text" id="productPrice" name="productPrice">
-            </div>
-            <div>
-                <label for="productImage">URL ảnh (tùy chọn)</label>
-                <input type="text" id="productImage" name="productImage" placeholder="images/placeholder.jpg">
-            </div>
-            <div>
-                <button type="submit">Thêm</button>
-            </div>
+            <label for="newName">Flower Name:</label>
+            <input type="text" id="newName" required>
+            <label for="newPrice">Price:</label>
+            <input type="number" id="newPrice" required>
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc"></textarea>
+            <button type="submit">Add</button>
         </form>
-
-        <!-- Product list (giữ class tương thích với JS/CSS) -->
-        <ul id="productList" class="product-list">
-            <!-- Sản phẩm mẫu -->
-            <li class="product-item">
-                <img src="/img/Red Roses.jpg" alt="Red Roses">
-                <div class="product-info">
-                    <span class="product-name">Red Roses</span>
-                    <span class="price">$2.50</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/WhiteRoses.jpg" alt="White Roses">
-                <div class="product-info">
-                    <span class="product-name">White Roses</span>
-                    <span class="price">$2.10</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Yellow Roses.jpg" alt="Yellow Roses">
-                <div class="product-info">
-                    <span class="product-name">Yellow Roses</span>
-                    <span class="price">$2.70</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Redtulip.jpg" alt="Red Tulips">
-                <div class="product-info">
-                    <span class="product-name">Red Tulips</span>
-                    <span class="price">$2.50</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Pink Tulips.jpg" alt="Pink Tulips">
-                <div class="product-info">
-                    <span class="product-name">Pink Tulips</span>
-                    <span class="price">$1.50</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Purple Tulips.jpg" alt="Purple Tulips">
-                <div class="product-info">
-                    <span class="product-name">Purple Tulips</span>
-                    <span class="price">$2.00</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/White Daisies.jpg" alt="White Daisies">
-                <div class="product-info">
-                    <span class="product-name">White Daisies</span>
-                    <span class="price">$0.90</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Yellow Daisies.jpg" alt="Yellow Daisies">
-                <div class="product-info">
-                    <span class="product-name">Yellow Daisies</span>
-                    <span class="price">$1.10</span>
-                </div>
-            </li>
-            <li class="product-item">
-                <img src="/img/Gerbera Daisies.jpg" alt="Gerbera Daisies">
-                <div class="product-info">
-                    <span class="product-name">Gerbera Daisies</span>
-                    <span class="price">$1.30</span>
-                </div>
-            </li>
-        </ul>
-        
+        <!-- Form liên hệ -->
+        <section>
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
-
     <footer>
+        <!-- Thông tin bản quyền -->
         <p>&copy; 2025 Flower Shop.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
-
 </html>

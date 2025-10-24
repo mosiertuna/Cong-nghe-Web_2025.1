@@ -10,7 +10,9 @@
 
 <body>
     <header>
+        <!-- Tiêu đề trang -->
         <h1>Flower Shop</h1>
+        <!-- Thanh điều hướng -->
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -20,12 +22,17 @@
         </nav>
     </header>
     <main>
+        <!-- Phần giới thiệu -->
         <section>
             <h2>Introduction</h2>
             <p>Explore our beautiful collection of flowers.</p>
         </section>
+        <!-- Danh sách sản phẩm với chức năng tìm kiếm và thêm sản phẩm -->
         <section id="product-list">
             <h2>Featured Flowers</h2>
+            <input type="text" id="searchInput" placeholder="Search flowers...">
+            <button id="searchBtn">Search</button>
+            <button id="addProductBtn">Add Flower</button>
             <article class="product-item">
                 <h3>Roses</h3>
                 <p>Roses are a classic symbol of love and beauty. Available in various colors.</p>
@@ -102,6 +109,20 @@
                 </li>
             </article>
         </section>
+        <!-- Form thêm sản phẩm mới -->
+        <form id="addProductForm" class="hidden">
+            <h3>Add New Flower</h3>
+            <label for="newName">Flower Name:</label>
+            <input type="text" id="newName" required>
+            <label for="newPrice">Price:</label>
+            <input type="number" id="newPrice" required>
+            <label for="newDesc">Description:</label>
+            <textarea id="newDesc" rows="3"></textarea>
+            <button type="submit">Add</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+            <p id="errorMsg" style="color:red;"></p>
+        </form>
+        <!-- Form liên hệ -->
         <section>
             <h2>Contact</h2>
             <form>
@@ -116,8 +137,10 @@
         </section>
     </main>
     <footer>
+        <!-- Thông tin bản quyền -->
         <p>&copy; 2025 Flower Shop.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

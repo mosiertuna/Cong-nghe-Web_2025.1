@@ -37,6 +37,36 @@ nav ul li a {
     padding: 10px;
     border-radius: 4px;
     background: #fafafa;
+    position: relative;
+}
+
+.product-item button {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-item button:hover {
+    background: #218838;
+}
+
+#cart-section {
+    margin-top: 20px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
 }
 
 form {
@@ -69,6 +99,10 @@ footer {
     padding: 10px 0;
     background: #333;
     color: #aaa;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 600px) {
